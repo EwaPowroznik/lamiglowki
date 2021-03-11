@@ -1,0 +1,180 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+    --font-color:#233144;
+    --color-hover:#0d1b2c;
+    --font-alternative:rgb(250, 236, 236);
+}
+body{
+    font-family: 'Zilla Slab', serif;
+    line-height: 1.4;
+    color:var(--font-color);
+    background: url('img/background.jpg') no-repeat center center/cover;
+
+}
+.container{
+    max-width:1000px;
+    width:100%;
+    height:auto;
+    margin:10px auto;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap:12px;
+}
+.container p{
+    font-weight: 600;
+}
+.container div{
+    background:rgba(250, 236, 236, 0.5);
+    margin:10px auto;
+    padding:10px 20px;
+}
+header{
+    max-width:1000px;
+    height:150px;
+    border-radius: 4px;
+    margin:10px auto;
+    background: url('img/header.jpg') 50% 72% /cover;
+}
+
+
+/* wybór nazwy teamu */
+.team{
+    width:auto;
+    height:150px;
+}
+.team input{
+    display:block;
+    width:100%;
+    height:1.5rem;
+    font-family: 'Zilla Slab', serif;
+    text-shadow:1px 1px #624444;
+    line-height: 1.4;
+    font-size: 1.3rem;
+    letter-spacing:0.2rem;
+    border:none;
+    border-bottom:3px dotted var(--font-color);
+    margin:10px 0;
+    color:var(--color-hover);
+    background:none;
+}
+.team input:focus{
+  outline: none;
+}
+.team input:required{
+outline-color: firebrick;
+}
+.team label{
+    font-size:1.5rem;
+}
+.team h1{
+    line-height: 1.4;
+    font-size: 1.5rem;
+    letter-spacing:0.1rem;
+    border-bottom:3px dotted var(--font-color);
+    margin:10px 0;
+    color:var(--color-hover);  
+}
+/* reszta divów */
+.riddle{
+    text-align: justify;
+}
+.riddle p{
+    font-size:1.1rem;
+    font-weight: 500;
+    padding-bottom:5px;
+}
+h3{
+    padding-bottom:8px;
+}
+.rules h1{
+    margin-bottom:10px;
+}
+
+/* answer riddle */
+.answer form{
+    display:flex;
+    flex-direction: column;
+}
+.answer form *{
+    padding:5px 0;
+    font-weight: 700;
+    font-size:1.2rem;
+}
+.new{
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid var(--font-color);
+    width:1.1rem;
+    height:1.1rem;
+	padding-bottom: 2px;
+    margin:-3px 5px;
+	border-radius: 6px;
+	display: inline-block;
+	position: relative;
+}
+
+input + label{
+    display:inline;
+}
+.answer label{
+    max-width:180px;
+}
+.answer label:hover{
+    border-bottom:1px dotted var(--color-hover);
+}
+
+.new:checked:after {
+	content: '\2714';
+	position: absolute;
+	bottom: -3px;
+	left: 1px;
+	color: var(--red-light);
+    background:none;
+} 
+.btn{
+    width:150px;
+    height:50px;
+    border:1px dotted var(--font-alternative);
+    border-radius: 4px;
+    color:var(--font-alternative);
+    background:var(--font-color);
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing:0.1rem;
+    transition:all 0.5s ease-in-out;
+    margin-bottom:20px;
+    padding:5px 10px;
+}
+.btn:hover{
+background:var(--color-hover);
+border:2px dashed var(--font-alternative);
+}
+
+@media(max-width:750px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-gap:0;
+        max-width:95%;
+    }
+    header{
+        max-width:95%;
+    }
+    .team{
+        max-height:120px;
+    }
+    .rules{
+        text-align: justify;
+    }
+} 
+@media(max-width:350px){
+
+    .team{
+        max-height:150px;
+    }
+   
+} 
